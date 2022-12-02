@@ -20,10 +20,10 @@ defmodule ToDoApp do
       Enum.member?(tasks, task)
     end
 
-    # Function that returns a random task from task list
+    # Function that returns 1 random task from task list
 
     def random_task(tasks) do
-      Enum.take_random(tasks, 1)
+      [task] = Enum.take_random(tasks, 1)
+      task
     end
-
 end

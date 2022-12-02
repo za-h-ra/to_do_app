@@ -5,7 +5,11 @@ defmodule ToDoApp do
     {num_of_tasks, _} =
       IO.gets("How many tasks would you want to complete today? ") |> Integer.parse()
 
-    num_of_tasks
+      #Create the list of tasks for each number
+      for _ <- 1..num_of_tasks do
+        task = IO.gets("Enter Task: ")
+        String.trim(task)
+      end
   end
 
   def test_task_list do
@@ -18,6 +22,15 @@ defmodule ToDoApp do
 
     def contains?(tasks, task) do
       Enum.member?(tasks, task)
+    end
+
+    # Search through the list for specific task keyword
+
+    def task_search(tasks, word) do
+       for task <- tasks, String.contains?(task, word) do
+        task
+      end
+
     end
 
     # Function that returns 1 random task from task list

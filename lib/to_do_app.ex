@@ -26,4 +26,10 @@ defmodule ToDoApp do
       [task] = Enum.take_random(tasks, 1)
       task
     end
+
+    # Check if task list is empty
+    def list_empty?(tasks) do
+      Enum.empty?(tasks)
+    end
+
 end

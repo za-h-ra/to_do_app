@@ -1,18 +1,9 @@
 defmodule ToDoApp do
-  @moduledoc """
-  Documentation for `ToDoApp`.
-  """
+  def create_tasks do
+    number_of_tasks = IO.gets("How many tasks would you want to complete today?")
+    # Convert String into Integer
+    {number_of_tasks, _q} = Integer.parse(number_of_tasks)
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> ToDoApp.hello()
-      :world
-
-  """
-  def hello do
-    :world
   end
+
 end

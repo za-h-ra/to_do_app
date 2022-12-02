@@ -11,4 +11,19 @@ defmodule ToDoApp do
   def test_task_list do
     ["meditate", "exercise", "do laundry"]
   end
+
+    # Check if certain task exists within given task list
+    # if "meditate" exists, return true
+    # else return false
+
+    def contains?(tasks, task) do
+      Enum.member?(tasks, task)
+    end
+
+    # Function that returns a random task from task list
+
+    def random_task(tasks) do
+      Enum.take_random(tasks, 1)
+    end
+
 end

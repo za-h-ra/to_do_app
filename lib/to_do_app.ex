@@ -39,6 +39,17 @@ defmodule ToDoApp do
       task
     end
 
+    # Delete the task from the list once it's complete
+    def complete_task(tasks, task) do
+      # If task exists, delete task
+      if contains?(tasks, task) do
+        List.delete(tasks, task)
+      else
+        # If it doesn't exist, we return a not found error
+        :not_found_error
+      end
+    end
+
     # Check if task list is empty
     def list_empty?(tasks) do
       Enum.empty?(tasks)

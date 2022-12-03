@@ -11,6 +11,11 @@ defmodule ToDoApp do
       end
   end
 
+  # Add new item to task list
+  def update_tasks(tasks, task) do
+    List.insert_at(tasks, -1, task)
+  end
+
   def test_task_list do
     ["meditate", "exercise", "do laundry"]
   end

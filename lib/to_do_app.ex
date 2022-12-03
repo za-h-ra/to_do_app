@@ -7,8 +7,7 @@ defmodule ToDoApp do
 
       #Create the list of tasks for each number
       for _ <- 1..num_of_tasks do
-        task = IO.gets("Enter Task: ")
-        String.trim(task)
+        IO.gets("Enter Task: ") |> String.trim()
       end
   end
 

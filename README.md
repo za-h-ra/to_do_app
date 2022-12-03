@@ -1,6 +1,9 @@
-# ToDoApp
+# To Do App
 
-**TODO: Add description**
+**TODO: This Elixir application allows you to create a list of tasks, update the list of tasks, search for keywords in the task list, delete the elements in the list, return a random item in a list and check if the list is empty.**
+
+![Screenshot 2022-12-02 at 7 19 53 PM](https://user-images.githubusercontent.com/55933076/205413823-3ab2d913-c859-429c-b709-b4575b17057c.png)
+
 
 ## Installation
 

@@ -7,7 +7,7 @@ defmodule ToDoApp do
 
     #Create the list of tasks for each number
     for _ <- 1..num_of_tasks do
-      IO.gets("Enter Task: ") |> String.trim()
+      IO.gets("Enter Task: ") |> String.trim() |> String.downcase()
     end
   end
 
@@ -18,7 +18,7 @@ defmodule ToDoApp do
 
   # Check if certain task exists within given task list
   def contains?(tasks, task) do
-    Enum.member?(tasks, task)
+    Enum.member?(tasks, task |> String.downcase())
   end
 
   # Search through the list for specific task keyword
